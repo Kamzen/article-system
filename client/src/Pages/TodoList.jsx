@@ -10,6 +10,7 @@ const TodoList = () => {
       const newTodoList = prevState.filter((options) => {
         return options.id !== todo.id;
       });
+      localStorage.setItem("todoList", JSON.stringify(newTodoList));
       return newTodoList;
     });
   };
@@ -22,7 +23,7 @@ const TodoList = () => {
         }
         return option;
       });
-
+      localStorage.setItem("todoList", JSON.stringify(newTodoList));
       return newTodoList;
     });
   };
