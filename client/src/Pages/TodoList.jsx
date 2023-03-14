@@ -65,6 +65,9 @@ const TodoList = () => {
           className="btn btn-secondary fw-bolder"
           style={{ width: "230px", textTransform: "uppercase" }}
           onClick={() => {
+            if(input === ""){
+              return;
+            }
             setTodoList((prevTodolist) => {
               const newTodoList = [
                 ...prevTodolist,
